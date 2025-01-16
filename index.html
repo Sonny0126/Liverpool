@@ -1,19 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>home</title>
-<meta charset="utf-8">
+    <title>Home</title>
+    <meta charset="utf-8">
+    <style>
+        /* 글씨를 더 진하고 살짝 크게 만들기 */
+        ul a {
+            font-weight: bold;
+            font-size: 2em;
+            text-decoration: none;
+            color: red;
+        }
+
+        /* 로고에 클릭 가능한 마우스 커서 추가 */
+        #new_logo {
+            width: 20%;
+            height: 20%;
+            cursor: pointer;
+        }   
+    </style>
 </head>
 
 <body>
-    <h1><a href="index.html">Liverpool</a></h1>
-    <ol>
-        <li><a href ="History.html">History</a></li>
-        <li><a href ="Team.html">Team</a></li>
-        <li><a href ="Stadium.html">Stadium</a></li>
-    </ol>
+    <!-- 로고 이미지 -->
+    <img id="new_logo" src="image/new_logo.png" alt="Logo">
 
-    <img src="image/background.png" width="30%", height="30%">
-    
+    <ul>
+        <a href="History.html">History<br></a>
+        <a href="Team.html">Team<br></a>
+        <a href="Stadium.html">Stadium</a>
+    </ul>
+
+    <script>
+        // 로고 클릭 시 index.html로 이동
+        document.getElementById("new_logo").addEventListener("click", () => {
+            window.location.href = "index.html";
+        });        
+    </script>
 </body>
 </html>

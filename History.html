@@ -1,16 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>History</title>
-<meta charset="utf-8">
+    <title>History</title>
+    <meta charset="utf-8">
+    <style>
+
+        ul a {
+            font-weight: bold;
+            font-size: 2em;
+            text-decoration: none;
+            color: red;
+        }      
+        /* 로고에 클릭 가능한 마우스 커서 추가 */
+        #new_logo {
+            width: 20%;
+            height: 20%;
+            cursor: pointer;
+        }        
+        #old_logo{
+            width: 10%;
+            height: 10%;
+            padding-left:35px;
+        }
+        p{
+            padding-left:35px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>
-    <h1><a href="index.html">Liverpool</a></h1>
+<!-- 로고 이미지 -->
+    <img id="new_logo" src="image/new_logo.png" alt="New_Logo">
+    <ul>
+        <a>History</a>
+    </ul>
 
-    <h2>History</h2>
-
-    <img src="image\logo.png" width="30%">
+    <img id="old_logo" src="image/old_logo.png" alt="Old_Logo">
+    
     <p><a href="https://www.liverpoolfc.com/" 
     target="_blank" title ="Liverpool FC site">
     Liverpool Football Club </a>is a professional football club 
@@ -19,5 +46,13 @@
     Football League the following year and has played its home games at Anfield 
     since its formation. Liverpool is one of the most valuable and widely supported clubs in the world.
     </p>
+
+    <script>
+        // 로고 클릭 시 index.html로 이동
+        document.getElementById("new_logo").addEventListener("click", () => {
+            window.location.href = "index.html";
+        });        
+    </script>
+
 </body>
 </html>
