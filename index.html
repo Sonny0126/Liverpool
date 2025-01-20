@@ -4,6 +4,22 @@
     <title>Home</title>
     <meta charset="utf-8">
     <style>
+        .container{
+            display:flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 20px;
+        }
+        /* 왼쪽 영역 */
+        .left{
+            display: flex;
+            flex-direction: column;
+        }
+        .right{
+            font-size:1.3em;
+            color: red;
+            text-align: left;
+        }
         /* 글씨를 더 진하고 살짝 크게 만들기 */
         ul a {
             font-weight: bold;
@@ -11,25 +27,47 @@
             text-decoration: none;
             color: red;
         }
-
         /* 로고에 클릭 가능한 마우스 커서 추가 */
         #new_logo {
             width: 10%;
             height: 10%;
             cursor: pointer;
-        }   
+        }
+        #background {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+        }
+
     </style>
 </head>
 
 <body>
-    <!-- 로고 이미지 -->
-    <img id="new_logo" src="image/new_logo.png" alt="Logo">
+    <div class="container">
+        <!--왼쪽-->
+        <div class="left">
+            <!--로고-->
+            <img id="new_logo" src="image/new_logo.png" alt="Logo">
+            <ul>
+                <a href="History.html">History<br></a>
+                <a href="Team.html">Team<br></a>
+                <a href="Stadium.html">Stadium</a>
+            </ul>
+        </div>
 
-    <ul>
-        <a href="History.html">History<br></a>
-        <a href="Team.html">Team<br></a>
-        <a href="Stadium.html">Stadium</a>
-    </ul>
+        <!-- 오른쪽 영역 -->
+        <div class="right">
+            <p>Welcome to the Liverpool FC Website</p>
+            <p>Discover the club's history, meet the team, and explore the stadium.</p>
+            <p>YNWA!</p>
+        </div>
+
+    </div>
+    
+
+    </div>
+    <img id="background" src="image/background.png" alt="background">
+
 
     <script>
         // 로고 클릭 시 index.html로 이동
