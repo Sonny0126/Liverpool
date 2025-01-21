@@ -1,65 +1,236 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Team</title>
-<meta charset="utf-8">
+    <title>Team</title>
+    <meta charset="utf-8">
     <style>
-        /* 로고에 클릭 가능한 마우스 커서 추가 */
-        img{
-            padding-left:35px;
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 35px;
+        }
+        img {
+            padding: 10px 0;
         }
         #new_logo {
             width: 10%;
-            height: 10%;
-            padding-left: 0px ; 
+            height: auto;
             cursor: pointer;
         }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+
         ul a {
             font-weight: bold;
             font-size: 2em;
             text-decoration: none;
             color: red;
-        }     
-        h1{
-            padding-left:35px;
-        }      
+        }
+
+        h1 {
+            margin: 20px 0 10px 0;
+            font-size: 1.5em;
+        }
+
+        .button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 1em;
+            color: white;
+            cursor: pointer;
+            background-color: red;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .toggle-section {
+            display: none;
+        }
+
+        .player-images {
+            display: flex;
+            flex-wrap: wrap; /* 줄 바꿈 허용 */
+            align-items: center; /* 이미지, 텍스트 수직 정렬 */
+            justify-content: space-between; /* 간격 균일 */
+            gap: 30px; 
+        }
+
+        .player-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /*컨테이너에서 자식들 세로 정렬*/
+            text-align: center; /*내부 텍스트 가로로 정렬*/
+            margin: 10px;
+        }
+
+        .player-item .player-profile,
+        .player-item .player-action {
+            width: 100px; 
+            margin-bottom: 5px; 
+        }
+
+        .player-item p {
+            font-size: 1em;
+            font-weight: bold;
+            margin: 0; /* 기본 여백 제거-> 안정성 때문에 남겨둠 */
+            white-space: nowrap; /* 텍스트 줄 바꿈 방지 */
+        }
+
+        .player-item p span {
+            display: block; /* 숫자를 하단에 배치 */
+        }
     </style>
 </head>
-
 <body>
-    <img id="new_logo" src="image/new_logo.png" >
-    
-    <ul>
-        <a>Team</a>
-    </ul>
-    <h1>Staff</h1>
-    <h1>Arne Slot</h1>
-    <img src="image/Slot.png" height="20%", width="20%">
-    
+    <!-- 로고 -->
+    <img id="new_logo" src="image/new_logo.png" alt="Logo">
 
-    <h1>Players</h1>
-    <h1>FW</h1>
-    <img src="image/Salah.png" width="80%">
-    <img src="image/Nunez.png" width="80%">
-    <img src="image/Diaz.png" width="80%">
-    <h1>MF</h1>
-    <img src="image/Mac.png" width="80%">
-    <img src="image/Szobo.png" width="80%">
-    <img src="image/Graven.png" width="80%">
-    <h1>DF</h1>
-    <img src="image/Robertson.png" width="80%">
-    <img src="image/Virgil.png" width="80%">
-    <img src="image/Konate.png" width="80%">
-    <img src="image/Trent.png" width="80%">
-    <h1>GK</h1>
-    <img src="image/Alisson.png" width="80%">
-    
+    <div class="container">
+        <ul>
+            <a id="team-section">Team</a>
+        </ul>
+
+        <!-- Staff Section -->
+        <h1>Staff</h1>
+        <!-- 버튼 누르면 보여지는 스태프 부분 -->
+        <button id="staffToggleButton" class="button">Show Staff</button>
+
+        <div id="staffDetails" class="toggle-section">
+            <img src="image/Slot.png" alt="Arne Slot" class="player-profile">
+            <h1>Arne Slot</h1>
+        </div>
+
+        <!-- Players Section -->
+        <h1>Players</h1>
+
+        <!-- 버튼 누르면 보여지는 플레이어 부분 -->
+        <button id="playerToggleButton" class="button">Show Players</button>
+        
+        <div id="playerDetails" class="toggle-section">
+            <!-- Forward Players -->
+            <h1>FW</h1>
+            <div class="player-images">
+                <div class="player-item">
+                    <img src="image/Salah.png" alt="Salah" class="player-profile">
+                    <img src="image/Salah_action.png" alt="Salah" class="player-action">
+                    <p>Mohamed Salah<span>No.11</span></p>
+                </div>
+
+                <div class="player-item">
+                    <img src="image/Nunez.png" alt="Nunez" class="player-profile">
+                    <img src="image/Nunez_action.png" alt="Nunez" class="player-action">
+                    <p>Darwin Nunez<span>No.9</span></p>
+                </div>
+
+                <div class="player-item">
+                    <img src="image/Diaz.png" alt="Diaz" class="player-profile">
+                    <img src="image/Diaz_action.png" alt="Diaz" class="player-action">
+                    <p>Luis Diaz<span>No.7</span></p>
+                </div>
+            </div>
+
+            <!-- Midfield Players -->
+            <h1>MF</h1>
+            <div class="player-images">
+                <div class="player-item">
+                    <img src="image/Mac.png" alt="Mac Allister" class="player-profile">
+                    <img src="image/Mac_action.png" alt="Mac Allister" class="player-action">
+                    <p>Mac Allister<span>No.10</span></p>
+                </div>
+
+                <div class="player-item">
+                    <img src="image/Szobo.png" alt="Szoboszlai" class="player-profile">
+                    <img src="image/Szobo_action.png" alt="Szoboszlai" class="player-action">
+                    <p>Dominik Szoboszlai<span>No.8</span></p>
+                </div>
+
+                <div class="player-item">
+                    <img src="image/Graven.png" alt="Gravenberch" class="player-profile">
+                    <img src="image/Graven_action.png" alt="Gravenberch" class="player-action">
+                    <p>Gravenberch<span>No.38</span></p>
+                </div>
+            </div>
+
+            <!-- Defender Players -->
+            <h1>DF</h1>
+            <div class="player-images">
+                <div class="player-item">
+                    <img src="image/Robertson.png" alt="Robertson" class="player-profile">
+                    <img src="image/Robertson_action.png" alt="Robertson" class="player-action">
+                    <p>Andy Robertson<span>No.26</span></p>
+                </div>
+
+                <div class="player-item">
+                    <img src="image/Virgil.png" alt="Van Dijk" class="player-profile">
+                    <img src="image/Virgil_action.png" alt="Van Dijk" class="player-action">
+                    <p>Virgil Van Dijk<span>No.4</span></p>
+                </div>
+
+                <div class="player-item">
+                    <img src="image/Konate.png" alt="Konate" class="player-profile">
+                    <img src="image/Konate_action.png" alt="Konate" class="player-action">
+                    <p>Ibrahima Konate<span>No.3</span></p>
+                </div>
+
+                <div class="player-item">
+                    <img src="image/Trent.png" alt="Alexander-Arnold" class="player-profile">
+                    <img src="image/Trent_action.png" alt="Alexander-Arnold" class="player-action">
+                    <p>Alexander Arnold<span>No.66</span></p>
+                </div>
+            </div>
+
+            <!-- Goalkeeper -->
+            <h1>GK</h1>
+            <div class="player-images">
+                <div class="player-item">
+                    <img src="image/Alisson.png" alt="Alisson" class="player-profile">
+                    <img src="image/Alisson_action.png" alt="Alisson" class="player-action">
+                    <p>Alisson Beker<span>No.1</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
         // 로고 클릭 시 index.html로 이동
         document.getElementById("new_logo").addEventListener("click", () => {
             window.location.href = "index.html";
-        });        
-    </script>
+        });
 
+        // 스태프 버튼 및 세부 정보
+        const staffToggleButton = document.getElementById("staffToggleButton");
+        const staffDetails = document.getElementById("staffDetails");
+
+        // 플레이어 버튼 및 세부 정보
+        const playerToggleButton = document.getElementById("playerToggleButton");
+        const playerDetails = document.getElementById("playerDetails");
+
+        // 스태프 토글 클릭 시 스태프 명단 보여주기
+        staffToggleButton.addEventListener("click", () => {
+            if (staffDetails.style.display === "none" || staffDetails.style.display === "") {
+                staffDetails.style.display = "block";
+                staffToggleButton.textContent = "Hide Staff";
+            } else {
+                staffDetails.style.display = "none";
+                staffToggleButton.textContent = "Show Staff";
+            }
+        });
+
+        // 플레이어 토글 클릭 시 플레이어 명단 보여주기
+        playerToggleButton.addEventListener("click", () => {
+            if (playerDetails.style.display === "none" || playerDetails.style.display === "") {
+                playerDetails.style.display = "block";
+                playerToggleButton.textContent = "Hide Players";
+            } else {
+                playerDetails.style.display = "none";
+                playerToggleButton.textContent = "Show Players";
+            }
+        });
+    </script>
 </body>
 </html>
