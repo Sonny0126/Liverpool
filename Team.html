@@ -53,20 +53,18 @@
             display: none;
         }
 
+        /* 스태프 프로필 */
+        .staff-profile{
+            width: 100px; 
+            margin-bottom: -30px; 
+        }
+
         .player-images {
             display: flex;
             flex-wrap: wrap; /* 줄 바꿈 허용 */
             align-items: center; /* 이미지, 텍스트 수직 정렬 */
             justify-content: space-between; /* 간격 균일 */
             gap: 30px; 
-        }
-
-        .player-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center; /*컨테이너에서 자식들 세로 정렬*/
-            text-align: center; /*내부 텍스트 가로로 정렬*/
-            margin: 10px;
         }
 
         .player-item .player-profile,
@@ -78,13 +76,13 @@
         .player-item p {
             font-size: 1em;
             font-weight: bold;
-            margin: 0; /* 기본 여백 제거-> 안정성 때문에 남겨둠 */
-            white-space: nowrap; /* 텍스트 줄 바꿈 방지 */
+            margin: 0; 
         }
 
         .player-item p span {
             display: block; /* 숫자를 하단에 배치 */
         }
+        
     </style>
 </head>
 <body>
@@ -102,8 +100,49 @@
         <button id="staffToggleButton" class="button">Show Staff</button>
 
         <div id="staffDetails" class="toggle-section">
-            <img src="image/Slot.png" alt="Arne Slot" class="player-profile">
+            <!-- 감독 -->
+            <h1>Head Coach</h1>
+            <img src="image/Slot.png" alt="Arne Slot" class="staff-profile">
             <h1>Arne Slot</h1>
+            <br>
+
+            <!-- 수석코치 -->
+            <h1>First Assistant Coach</h1>
+            <img src="image/Huslshoff.png" alt="Huslshoff" class="staff-profile">
+            <h1>Sipke Huslshoff</h1>
+            <br>
+            
+
+            <!-- 수석코치 -->
+            <h1>Assistant Coach</h1>
+            <img src="image/Heitinga.png" alt="Heitinga" class="staff-profile">
+            <h1>John Heitinga</h1>
+            <br>
+
+            <!-- 기술 코치  -->
+            <h1>Technical Coach</h1>
+            <img src="image/Paiva.png" alt="Paiva" class="staff-profile">
+            <h1>Diogo Paiva</h1>            
+            <br>
+            
+            <!-- 개인 개발 코치 -->
+            <h1>Individual Development Coach</h1>
+            <img src="image/Briggs.png" alt="Briggs" class="staff-profile">
+            <h1>Aaron Briggs</h1>
+            <br>
+    
+            <!-- 수석 골키퍼 코치 -->
+            <h1>Head of Goalkeeper Coach</h1>
+            <img src="image/Otte.png" alt="Otte" class="staff-profile">
+            <h1>Fabian Otte</h1>
+            <br>
+
+            <!-- 골키퍼 코치 -->
+            <h1>Goalkeeper Coach</h1>
+            <img src="image/Taffarel.png" alt="Taffarel" class="staff-profile">
+            <h1>Claudio Taffarel</h1>
+            <br>
+
         </div>
 
         <!-- Players Section -->
