@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Home</title>
     <meta charset="utf-8">
@@ -29,10 +29,12 @@
         <img src="image/YNWA_logo.png" alt="YNWA_logo" class="YNWA_logo">
         <img src="image/YNWA_poster.png" alt="YNWA_poster" class="YNWA_poster">
     </div>
-    <!-- YNWA song youtube  -->
-     <div>
-        <a href="https://www.youtube.com/watch?v=OV5_LQArLa0" class="text_center">You Will Never Walk ALone </a>
-    </div>
+
+    <!-- 버튼을 추가해서 음원을 재생하는 부분 -->
+    <img id="playButton" src="sound/play.png" alt="YNWA">
+     <!-- 오디오 요소 추가 -->
+     <audio id="ynwaAudio" src="sound/YNWAfan.mp3"></audio>
+
     <p> The song "You'll Never Walk Alone", originally from the Rodgers and Hammerstein musical Carousel and later recorded by 
         Liverpool musicians Gerry and the Pacemakers, is the club's anthem and has been sung by the Anfield crowd since the early 1960s</p>
 
@@ -42,10 +44,26 @@
     <p> The "You'll Never Walk Alone" portion of the Shankly Gates is also reproduced on the club's badge.</p>
 
     <script>
-        // 로고 클릭 시 index.html로 이동
-        document.getElementById("new_logo").addEventListener("click", () => {
-            window.location.href = "index.html";
-        });        
+    // 로고 클릭 시 index.html로 이동
+    document.getElementById("new_logo").addEventListener("click", () => {
+        window.location.href = "index.html";
+    });  
+
+    // 버튼 클릭 시 YNWAfan.mp3 재생
+    document.getElementById("playButton").addEventListener("click", () => {
+        const audio = document.getElementById("ynwaAudio");
+        const buttonImage = document.getElementById("playButton");
+
+        if(buttonImage.src.includes("play.png")){
+            audio.play();
+            buttonImage.src="sound/pause.png";
+        }
+        else if(buttonImage.src.includes("pause.png")){
+            audio.pause();
+            buttonImage.src="sound/play.png";
+        }
+    });
+    
     </script>
 </body>
 </html>

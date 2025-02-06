@@ -40,6 +40,11 @@
             color: red;
         }
 
+        #playButton{
+            width: 5%;
+            margin-left: 30px;
+        }
+
 /* 모바일 혹은 화면 줄여서 볼 때 */
 @media screen and (max-width: 768px) {
   .container {
