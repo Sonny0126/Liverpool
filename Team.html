@@ -1,185 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Team</title>
+    <title>Liverpool Squad</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="Team.css">
 </head>
 <body>
-    <!-- 로고 -->
-    <img id="new_logo" src="image/new_logo.png" alt="Logo">
-
+    <img id="new_logo" src="image/new_logo.png" alt ="Logo">
     <div class="container">
-        <ul>
-            <a id="team-section">Team</a>
-        </ul>
+        <!-- 헤더 -->
 
-        <!-- Staff Section -->
-        <h1>Staff</h1>
-        <!-- 버튼 누르면 보여지는 스태프 부분 -->
-        <button id="staffToggleButton" class="button">Show Staff</button>
-
-        <div id="staffDetails" class="toggle-section">
-            <!-- 감독 -->
-            <h1>Head Coach</h1>
-            <img src="person_image/Slott.png" alt="Arne Slot" class="staff-profile">
-            <h1>Arne Slot</h1>
-            <br>
-
-            <!-- 수석코치 -->
-            <h1>First Assistant Coach</h1>
-            <img src="person_image/Huslshoff.png" alt="Huslshoff" class="staff-profile">
-            <h1>Sipke Huslshoff</h1>
-            <br>
-            
-
-            <!-- 수석코치 -->
-            <h1>Assistant Coach</h1>
-            <img src="person_image/Heitinga.png" alt="Heitinga" class="staff-profile">
-            <h1>John Heitinga</h1>
-            <br>
-
-            <!-- 기술 코치  -->
-            <h1>Technical Coach</h1>
-            <img src="person_image/Paiva.png" alt="Paiva" class="staff-profile">
-            <h1>Diogo Paiva</h1>            
-            <br>
-            
-            <!-- 개인 개발 코치 -->
-            <h1>Individual Development Coach</h1>
-            <img src="person_image/Briggs.png" alt="Briggs" class="staff-profile">
-            <h1>Aaron Briggs</h1>
-            <br>
-    
-            <!-- 수석 골키퍼 코치 -->
-            <h1>Head of Goalkeeper Coach</h1>
-            <img src="person_image/Otte.png" alt="Otte" class="staff-profile">
-            <h1>Fabian Otte</h1>
-            <br>
-
-            <!-- 골키퍼 코치 -->
-            <h1>Goalkeeper Coach</h1>
-            <img src="person_image/Taffarel.png" alt="Taffarel" class="staff-profile">
-            <h1>Claudio Taffarel</h1>
-            <br>
-
+        <div class="header">
+            <h1>라인업</h1>
         </div>
 
-        <!-- Players Section -->
-        <h1>Players</h1>
-
-        <!-- 버튼 누르면 보여지는 플레이어 부분 -->
-        <button id="playerToggleButton" class="button">Show Players</button>
-        
-        <div id="playerDetails" class="toggle-section">
-            <!-- Forward Players -->
-            <h1>FW</h1>
-            <div class="player-images">
-                <div class="player-item">
-                    <img src="person_image/Salah.png" alt="Salah" class="player-profile">
-                    <p>Mohamed Salah<span>No.11</span></p>
-                </div>
-
-                <div class="player-item">
-                    <img src="person_image/Nunez.png" alt="Nunez" class="player-profile">
-                    <p>Darwin Nunez<span>No.9</span></p>
-                </div>
-
-                <div class="player-item">
-                    <img src="person_image/Diaz.png" alt="Diaz" class="player-profile">
-                    <p>Luis Diaz<span>No.7</span></p>
-                </div>
+        <!-- 감독 정보 -->
+        <div class="coach-section">
+            <img src="person_image/Slott.png" alt="Arne Slot" class="coach-profile">
+            <div class="coach-info">
+                <h2>감독</h2>
+                <p>나이: 46, 키: 185, 체중: 75kg</p>
+                <p>Arne Slot</p>
+                <p>네덜란드</p>
             </div>
+        </div>
 
-            <!-- Midfield Players -->
-            <h1>MF</h1>
-            <div class="player-images">
-                <div class="player-item">
-                    <img src="person_image/Mac.png" alt="Mac Allister" class="player-profile">
-                    <p>Mac Allister<span>No.10</span></p>
-                </div>
+        <!-- 선수 목록을 동적 로드할 공간 -->
+        <div id="players-section"></div>
 
-                <div class="player-item">
-                    <img src="person_image/Szobo.png" alt="Szoboszlai" class="player-profile">
-                    <p>Dominik Szoboszlai<span>No.8</span></p>
-                </div>
-
-                <div class="player-item">
-                    <img src="person_image/Graven.png" alt="Gravenberch" class="player-profile">
-                    <p>Gravenberch<span>No.38</span></p>
-                </div>
-            </div>
-
-            <!-- Defender Players -->
-            <h1>DF</h1>
-            <div class="player-images">
-                <div class="player-item">
-                    <img src="person_image/Robertson.png" alt="Robertson" class="player-profile">
-                    <p>Andy Robertson<span>No.26</span></p>
-                </div>
-
-                <div class="player-item">
-                    <img src="person_image/Virgil.png" alt="Van Dijk" class="player-profile">
-                    <p>Virgil Van Dijk<span>No.4</span></p>
-                </div>
-
-                <div class="player-item">
-                    <img src="person_image/Konate.png" alt="Konate" class="player-profile">
-                    <p>Ibrahima Konate<span>No.3</span></p>
-                </div>
-
-                <div class="player-item">
-                    <img src="person_image/Trent.png" alt="Alexander-Arnold" class="player-profile">
-                    <p>Alexander Arnold<span>No.66</span></p>
-                </div>
-            </div>
-
-            <!-- Goalkeeper -->
-            <h1>GK</h1>
-            <div class="player-images">
-                <div class="player-item">
-                    <img src="person_image/Alisson.png" alt="Alisson" class="player-profile">
-                    <p>Alisson Beker<span>No.1</span></p>
-                </div>
-            </div>
+        <!-- 파운드 환율 계산기-->
+        <div class="currency-converter">
+            <h2>💰 파운드(GBP) → 원(KRW) 환율 계산기</h2>
+            <label for="poundInput">파운드(£):</label>
+            <input type="number" id="poundInput" placeholder="금액 입력">
+            <button onclick="convertCurrency()">변환</button>
+            <p id="result"></p>
         </div>
     </div>
 
     <script>
+
         // 로고 클릭 시 index.html로 이동
         document.getElementById("new_logo").addEventListener("click", () => {
             window.location.href = "index.html";
-        });   
+        });  
+        // 선수 데이터 JSON
+        let playersData = {
+            "FW": [
+                { "name": "루이스 디아즈", "age": 28, "height": "178cm", "weight": "65kg", "value": "€ 85.0M", "contract": "Jun 2027", "img": "person_image/Diaz.png" },
+                { "name": "다윈 누녜스", "age": 25, "height": "188cm", "weight": "78kg", "value": "€ 65.0M", "contract": "Jun 2028", "img": "person_image/Nunez.png" },
+                { "name": "코디 각포", "age": 25, "height": "189cm", "weight": "76kg", "value": "€ 60.0M", "contract": "Jun 2028", "img": "person_image/Gakpo.png" },
+                { "name": "모하메드 살라", "age": 32, "height": "175cm", "weight": "71kg", "value": "€ 55.0M", "contract": "Jun 2025", "img": "person_image/Salah.png" },
+                { "name": "디오고 조타", "age": 28, "height": "178cm", "weight": "73kg", "value": "€ 50.0M", "contract": "Jun 2027", "img": "person_image/Jota.png" },
+                { "name": "페데리코 키에사", "age": 27, "height": "175cm", "weight": "70kg", "value": "€ 22.0M", "contract": "Jun 2028", "img": "person_image/Kiesa.png" }
+            ],
+            "MF": [
+                { "name": "알렉시스 맥 알리스터", "age": 26, "height": "176cm", "weight": "70kg", "value": "€ 80.0M", "contract": "Jun 2028", "img": "person_image/Mac.png" },
+                { "name": "도미닉 소보슬라이", "age": 24, "height": "186cm", "weight": "74kg", "value": "€ 75.0M", "contract": "Jun 2028", "img": "person_image/Szobo.png" },
+                { "name": "라이언 그라벤베르흐", "age": 22, "height": "190cm", "weight": "75kg", "value": "€ 55.0M", "contract": "Jun 2028", "img": "person_image/Graven.png" },
+                { "name": "커티스 존스", "age": 24, "height": "185cm", "weight": "81kg", "value": "€ 45.0M", "contract": "Jun 2027", "img": "person_image/Curtis.png" },
+                { "name": "하비 엘리엇", "age": 21, "height": "170cm", "weight": "65kg", "value": "€ 35.0M", "contract": "Jun 2027", "img": "person_image/Elliot.png" },
+                { "name": "엔도 와타루", "age": 32, "height": "178cm", "weight": "76kg", "value": "€ 12.0M", "contract": "Jun 2027", "img": "person_image/Endo.png" }
+            ],
+            "DF": [
+                { name: "트렌트 알렉산더-아놀드", age: 26, height: "175cm", weight: "70kg", value: "€ 75.0M", contract: "Jun 2025", img: "person_image/Trent.png" },
+                { name: "이브라히마 코나테", age: 25, height: "193cm", weight: "84kg", value: "€ 50.0M", contract: "Jun 2026", img: "person_image/Konate.png" },
+                { name: "앤드류 로버트슨", age: 31, height: "178cm", weight: "64kg", value: "€ 25.0M", contract: "Jun 2026", img: "person_image/Robertson.png" },
+                { name: "자렐 콴사", age: 22, height: "197cm", weight: "80kg", value: "€ 22.0M", contract: "Jun 2029", img: "person_image/Quansah.png" },
+                { name: "코너 브래들리", age: 21, height: "181cm", weight: "74kg", value: "€ 20.0M", contract: "Jun 2027", img: "person_image/Bradley.png" },
+                { name: "치미카스, 코스타스", age: 28, height: "178cm", weight: "77kg", value: "€ 20.0M", contract: "Jun 2027", img: "person_image/Tsimikas.png" }
+            ],
+            "GK": [
+                { name: "알리송", age: 32, height: "191cm", weight: "91kg", value: "€ 25.0M", contract: "Jun 2027", img: "person_image/Alisson.png" },
+                { name: "케빈 켈레허", age: 26, height: "188cm", weight: "80kg", value: "€ 22.0M", contract: "Jun 2026", img: "person_image/Kelleher.png" },
+                { name: "비테슬라프 야로스", age: 23, height: "190cm", weight: "85kg", value: "€ 5.0M", contract: "Jun 2025", img: "person_image/Jaros.png" }
+            ]
+        };
 
-        // 스태프 버튼 및 세부 정보
-        const staffToggleButton = document.getElementById("staffToggleButton");
-        const staffDetails = document.getElementById("staffDetails");
+        // 선수 목록 동적 로드
+        function loadPlayers() {
+            let playersSection = document.getElementById("players-section");
+            playersSection.innerHTML = ""; // 기존 데이터 초기화
 
-        // 플레이어 버튼 및 세부 정보
-        const playerToggleButton = document.getElementById("playerToggleButton");
-        const playerDetails = document.getElementById("playerDetails");
+            for (let position in playersData) {
+                let table = `
+                    <h2>${position === "FW" ? "공격수" : position === "MF" ? "미드필더" : position === "DF" ? "수비수" : "골키퍼"}</h2>
+                    <table class="player-table">
+                        <thead>
+                            <tr>
+                                <th>선수</th>
+                                <th>나이</th>
+                                <th>높이</th>
+                                <th>몸무게</th>
+                                <th>사회적 지위</th>
+                                <th>계약 만료</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                `;
 
-        // 스태프 토글 클릭 시 스태프 명단 보여주기
-        staffToggleButton.addEventListener("click", () => {
-            if (staffDetails.style.display === "none" || staffDetails.style.display === "") {
-                staffDetails.style.display = "block";
-                staffToggleButton.textContent = "Hide Staff";
-            } else {
-                staffDetails.style.display = "none";
-                staffToggleButton.textContent = "Show Staff";
+                playersData[position].forEach(player => {
+                    table += `
+                        <tr>
+                            <td><img src="${player.img}" alt="${player.name}" class="player-img"> ${player.name}</td>
+                            <td>${player.age}</td>
+                            <td>${player.height}</td>
+                            <td>${player.weight}</td>
+                            <td>${player.value}</td>
+                            <td>${player.contract}</td>
+                        </tr>
+                    `;
+                });
+
+                table += `</tbody></table>`;
+                playersSection.innerHTML += table;
             }
-        });
+        }
 
-        // 플레이어 토글 클릭 시 플레이어 명단 보여주기
-        playerToggleButton.addEventListener("click", () => {
-            if (playerDetails.style.display === "none" || playerDetails.style.display === "") {
-                playerDetails.style.display = "block";
-                playerToggleButton.textContent = "Hide Players";
-            } else {
-                playerDetails.style.display = "none";
-                playerToggleButton.textContent = "Show Players";
-            }
-        });
+        // 페이지 로드 시 실행
+        loadPlayers();
+
+        // 환율 변환 함수
+        function convertCurrency() {
+            let pound = document.getElementById("poundInput").value;
+            let exchangeRate = 1881; // 현재 1 파운드 = 약 1881원
+            let result = (pound * exchangeRate).toLocaleString() + " 원";
+            document.getElementById("result").innerText = `환전된 금액: ${result}`;
+        }
+
     </script>
 </body>
 </html>
