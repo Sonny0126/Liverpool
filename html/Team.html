@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Liverpool Squad</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/Team.css">
+</head>
+<body>
+    <img id="new_logo" src="../image/new_logo.png" alt ="Logo">
+    <div class="container">
+        <!-- 헤더 -->
+
+        <div class="header">
+            <h1>라인업</h1>
+        </div>
+
+        <!-- 감독 정보 -->
+        <div class="coach-section">
+            <img src="../person_image/Slott.png" alt="Arne Slot" class="coach-profile">
+            <div class="coach-info">
+                <h2>감독</h2>
+                <p>나이: 46, 키: 185, 체중: 75kg</p>
+                <p>Arne Slot</p>
+                <p>네덜란드</p>
+            </div>
+        </div>
+
+        <!-- 선수 목록을 동적 로드할 공간 -->
+        <div id="players-section"></div>
+
+        <!-- 파운드 환율 계산기-->
+        <div class="currency-converter">
+            <h2>💰 파운드(GBP) → 원(KRW) 환율 계산기</h2>
+            <label for="poundInput">파운드(£):</label>
+            <input type="number" id="poundInput" placeholder="금액 입력">
+            <button onclick="convertCurrency()">변환</button>
+            <p id="result"></p>
+        </div>
+    </div>
+
+    <script src="../js/Team.js"></script>
+</body>
+</html>

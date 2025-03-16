@@ -1,0 +1,61 @@
+.container{
+  display:flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+}
+/* 왼쪽 영역 */
+.left{
+  flex: 1;
+  margin-right: 20px;
+}
+.right{
+  flex: 1;
+  display: flex;
+  font-size: 1em;
+  color: black;
+  text-align:left;
+}
+.box{
+  border: 3px solid;
+  padding: 5px;
+  text-align: left;
+  margin-left: 300px;
+  width: 400px;
+}
+ul a {
+  
+  font-weight: bold;
+  font-size: 2em;
+  text-decoration: none;
+  color: red;
+}     
+/* 로고에 클릭 가능한 마우스 커서 추가 */
+#new_logo {
+  max-width: 100px;
+  height: auto;
+  cursor: pointer;
+  object-fit: contain;
+}        
+#old_logo{
+  width: 40%;
+  height: 30%;
+  display: block;
+  margin: 0 auto;
+}
+#uniform{
+  display: grid;
+  place-items: center; /* 가로와 세로 중앙 정렬 */
+  margin: auto;
+  width: 60%;
+  height: 25%;    
+}
+p1{
+  padding-left:35px;
+  font-weight: bold;
+  color:black;
+}
+p2{
+  padding-left:35px;
+  font-weight: bold;
+}

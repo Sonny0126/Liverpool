@@ -1,0 +1,96 @@
+
+        /* 글씨를 더 진하고 살짝 크게 만들기 */
+        h1{
+            font-weight: bold;
+            font-size: 2em;
+            margin-left: 20px;
+            color: red;
+        }
+        /* 로고에 클릭 가능한 마우스 커서 추가 */
+        #new_logo {
+            max-width: 100px;
+            height: auto;
+            cursor: pointer;
+            object-fit: contain;
+        }
+        p{
+            padding-left:35px;
+            font-weight: bold;
+        }   
+        .Supporters{
+            width: 100%;
+        }
+        .container{
+            display: flex;
+            justify-content: center; /* 가로 중앙 정렬 */
+            align-items: center;    /* 세로 중앙 정렬 */
+        }
+        .YNWA_logo{
+            width: 565px;
+        }
+        .YNWA_poster{
+            width: 300px;
+        }
+        .text_center {
+            display: flex;
+            justify-content: center; /* 가로 중앙 정렬 */
+        }
+        a{
+            font-weight: 900;
+            color: red;
+        }
+
+        #playButton{
+            width: 5%;
+            margin-left: 30px;
+        }
+
+/* 모바일 혹은 화면 줄여서 볼 때 */
+@media screen and (max-width: 768px) {
+  .container {
+  flex-direction: column; /* 모바일에서는 세로로 배치 */
+  align-items: center;
+  text-align: center;
+ }
+    
+ .left {
+      align-items: center;
+ }
+   
+ ul {
+    padding: 0;
+    text-align: center;
+ }
+    
+ ul li {
+       list-style: none;
+       margin: 10px 0;
+ }
+    
+ ul a {
+      font-size: 1.5em; /* 글씨 크기 줄이기 */
+ }
+    
+ .right {
+      font-size: 1.2em; /* 오른쪽 텍스트 크기 줄이기 */
+      margin-top: 20px;
+ }
+   
+ #new_logo {
+        max-width: 80px; /* 로고 크기 조정 */
+ }
+}
+    
+@media screen and (max-width: 480px) {
+    ul a {
+        font-size: 1.2em; /* 더 작은 화면에서는 글자 크기 더 줄이기 */
+    }
+   
+    .right {
+        font-size: 1em;
+    }
+    
+    #new_logo {
+        max-width: 60px;
+    }
+}
