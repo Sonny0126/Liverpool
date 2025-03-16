@@ -1,8 +1,3 @@
- // 로고 클릭 시 홈으로 이동
- document.getElementById("new_logo").addEventListener("click", () => {
-  window.location.href="../index.html";
-});
-
 
 // 구글 API 키를 변수에 저장
 const apiKey = "AIzaSyBolxyvNrDE1ZT9yy8DxS5pBPVSgyXMWDw"; // 여기에 API 키를 입력합니다.
