@@ -1,0 +1,71 @@
+/* 전체 컨테이너 스타일 */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* 중앙 정렬 컨테이너 */
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px;
+  background-color: #ffffff;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+/* 왼쪽 콘텐츠 스타일 */
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 로고 이미지 */
+#new_logo {
+  width: 160px;
+  height: auto;
+  margin-bottom: 24px;
+}
+
+/* Recent Issues 텍스트 */
+.left ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+}
+
+.left ul a {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* 사진 스타일 */
+.left img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
+  margin-top: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* 인용 텍스트 스타일 */
+.left a {
+  display: block;
+  margin-top: 12px;
+  font-size: 18px;              /* ✔ 글씨 크기 증가 */
+  font-weight: 600;             /* ✔ 글씨 굵기 증가 */
+  line-height: 1.8;
+  color: #333;                  /* ✔ 더 진한 글씨색 */
+  padding: 16px;
+  background-color: #f9f9f9;
+  border-left: 4px solid #c00;
+  border-radius: 6px;
+  box-shadow: inset 0 0 4px rgba(0,0,0,0.05);
+  white-space: pre-wrap;        /* 줄바꿈 유지 */
+}
+
