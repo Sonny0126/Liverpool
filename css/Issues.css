@@ -18,7 +18,7 @@ body {
 }
 
 /* 왼쪽 콘텐츠 스타일 */
-.left {
+.Recent_Issues {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,20 +32,20 @@ body {
 }
 
 /* Recent Issues 텍스트 */
-.left ul {
+.Recent_Issues ul {
   list-style: none;
   padding: 0;
   margin: 0 0 24px 0;
 }
 
-.left ul a {
+.Recent_Issues ul a {
   font-size: 24px;
   font-weight: bold;
   color: #333;
 }
 
 /* 사진 스타일 */
-.left img {
+.Recent_Issues img {
   width: 100%;
   max-width: 500px;
   border-radius: 8px;
@@ -54,7 +54,7 @@ body {
 }
 
 /* 인용 텍스트 스타일 */
-.left a {
+.Recent_Issues a {
   display: block;
   margin-top: 12px;
   font-size: 18px;              /* ✔ 글씨 크기 증가 */
