@@ -36,6 +36,13 @@ body {
   list-style: none;
   padding: 0;
   margin: 0 0 24px 0;
+  
+  font-family: 'Noto Sans KR', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* 한글+영문 조합 */
+  font-size: 22px;
+  font-weight: 700;
+  color: #222;                    /* 더 세련된 진한 회색 */
+  letter-spacing: 0.5px;          /* 글자 간 간격 살짝 추가 */
+  text-transform: capitalize;     /* 각 단어 첫 글자 대문자 (선택) */
 }
 
 .Recent_Issues ul a {
