@@ -5,17 +5,24 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="../css/Issues.css">
 </head>
+
 <body>
     <div class="container">
         <div class="Recent_Issues">
+            <!-- 로고 이미지 -->
             <img id="new_logo" src="../image/new_logo.png" alt="New_Logo">
 
-            <button id="toggle-issues-btn">Toggle Issues</button>
+            <h2>Recent Issues</h2>
+            <!-- ✅ 이 버튼이 JS 코드와 연결되어야 동작함 -->
+            <button id="toggle-issues-btn">Toggle Issue List</button>
 
-            <ul id="issue-list" style="display: none;">
-                <!-- JS로 이슈 목록이 동적으로 추가됨 -->
-            </ul>
+            <!-- ✅ 이 리스트에 JS가 항목을 채워넣음 -->
+            <ul id="issue-list"></ul>
         </div>
     </div>
 
+    <!-- JS 파일들 -->
     <script src="../js/logo.js"></script>
+    <script src="../js/issues.js"></script>
+</body>
+</html>
