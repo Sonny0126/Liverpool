@@ -1,7 +1,9 @@
 // 이슈 데이터
 const issues = [
   {
-    title: "Regendary players Resiging with Salah & Virgil",
+    date: "4/10",
+    title:
+      "Regendary players Mohamed Salah resigns new contract with Liverpool FC",
     details: [
       {
         image: "../image/Salah_Resigning.jpg",
@@ -9,6 +11,13 @@ const issues = [
 
                 I would like to say to [the fans], I am very, very happy to be here. I signed here because I believe we can win a lot of big trophies together. Keep supporting us and we’ll give it our best, and hopefully in the future we’re going to win more trophies.”`,
       },
+    ],
+  },
+  {
+    date: "4/17",
+    title:
+      "Regendary players Virgil Van Dijk resigns new contract with Liverpool FC",
+    details: [
       {
         image: "../image/Virgil_Resigning.jpg",
         text: `Virgil: “I’m very happy, very proud,” Van Dijk told Liverpoolfc.com in exclusive reaction. “There are so many emotions obviously that go through my head right now speaking about it.
@@ -38,6 +47,7 @@ const issues = [
     ],
   },
   {
+    date: "6/20",
     title:
       "New Signing: Liverpool agree signing of Florian Wirtz from Bayer Leverkusen",
     details: [
@@ -52,6 +62,7 @@ const issues = [
     ],
   },
   {
+    date: "6/26",
     title:
       "New Signing: Liverpool complete signing of Milos Kerkez from Bournemouth",
     details: [
