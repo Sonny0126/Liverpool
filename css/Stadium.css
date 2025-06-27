@@ -1,79 +1,77 @@
+body {
+  font-family: "Noto Sans KR", "Segoe UI", sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  color: #222;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 제목 */
 ul a {
+  display: block;
   font-weight: bold;
   font-size: 2em;
   text-decoration: none;
-  color: red;
+  color: #c00;
+  margin-bottom: 20px;
 }
-#Anfield {
-  width: 100%;
-}
-#outside {
-  width: 100%;
-}
-#on_field {
-  width: 100%;
-}
+
+/* 로고 */
 #new_logo {
   max-width: 100px;
   height: auto;
   cursor: pointer;
-  object-fit: contain;
+  margin: 20px 0;
 }
+
+/* 이미지 공통 스타일 */
+#Anfield,
+#outside,
+#on_field {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 본문 텍스트 */
 p {
-  padding-left: 35px;
-  font-weight: bold;
+  margin: 20px auto;
+  line-height: 1.6;
+  max-width: 800px;
+  text-align: left;
 }
+
+/* 지도 */
 #map {
   height: 400px;
   width: 100%;
+  margin: 40px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* 모바일 혹은 화면 줄여서 볼 때 */
+/* 모바일 대응 */
 @media screen and (max-width: 768px) {
   .container {
-    flex-direction: column; /* 모바일에서는 세로로 배치 */
-    align-items: center;
-    text-align: center;
+    padding: 20px;
   }
-
-  .left {
-    align-items: center;
-  }
-
-  ul {
-    padding: 0;
-    text-align: center;
-  }
-
-  ul li {
-    list-style: none;
-    margin: 10px 0;
-  }
-
   ul a {
-    font-size: 1.5em; /* 글씨 크기 줄이기 */
+    font-size: 1.6em;
   }
-
-  .right {
-    font-size: 1.2em; /* 오른쪽 텍스트 크기 줄이기 */
-    margin-top: 20px;
-  }
-
   #new_logo {
-    max-width: 80px; /* 로고 크기 조정 */
-  }
-}
-
-@media screen and (max-width: 480px) {
-  ul a {
-    font-size: 1.2em; /* 더 작은 화면에서는 글자 크기 더 줄이기 */
-  }
-
-  .right {
-    font-size: 1em;
-  }
-
-  #new_logo {
-    max-width: 60px;
+    max-width: 80px;
   }
 }

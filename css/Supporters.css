@@ -1,96 +1,114 @@
-
-        /* 글씨를 더 진하고 살짝 크게 만들기 */
-        h1{
-            font-weight: bold;
-            font-size: 2em;
-            margin-left: 20px;
-            color: red;
-        }
-        /* 로고에 클릭 가능한 마우스 커서 추가 */
-        #new_logo {
-            max-width: 100px;
-            height: auto;
-            cursor: pointer;
-            object-fit: contain;
-        }
-        p{
-            padding-left:35px;
-            font-weight: bold;
-        }   
-        .Supporters{
-            width: 100%;
-        }
-        .container{
-            display: flex;
-            justify-content: center; /* 가로 중앙 정렬 */
-            align-items: center;    /* 세로 중앙 정렬 */
-        }
-        .YNWA_logo{
-            width: 565px;
-        }
-        .YNWA_poster{
-            width: 300px;
-        }
-        .text_center {
-            display: flex;
-            justify-content: center; /* 가로 중앙 정렬 */
-        }
-        a{
-            font-weight: 900;
-            color: red;
-        }
-
-        #playButton{
-            width: 5%;
-            margin-left: 30px;
-        }
-
-/* 모바일 혹은 화면 줄여서 볼 때 */
-@media screen and (max-width: 768px) {
-  .container {
-  flex-direction: column; /* 모바일에서는 세로로 배치 */
-  align-items: center;
-  text-align: center;
- }
-    
- .left {
-      align-items: center;
- }
-   
- ul {
-    padding: 0;
-    text-align: center;
- }
-    
- ul li {
-       list-style: none;
-       margin: 10px 0;
- }
-    
- ul a {
-      font-size: 1.5em; /* 글씨 크기 줄이기 */
- }
-    
- .right {
-      font-size: 1.2em; /* 오른쪽 텍스트 크기 줄이기 */
-      margin-top: 20px;
- }
-   
- #new_logo {
-        max-width: 80px; /* 로고 크기 조정 */
- }
+body {
+  font-family: "Noto Sans KR", "Segoe UI", sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  color: #222;
 }
-    
+
+/* 컨테이너 박스 */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* 로고 */
+#new_logo {
+  max-width: 100px;
+  height: auto;
+  cursor: pointer;
+  margin: 20px;
+}
+
+/* 제목 */
+h1 {
+  font-weight: bold;
+  font-size: 2em;
+  margin: 20px;
+  color: #c00;
+  text-align: center;
+}
+
+/* 본문 */
+p {
+  margin: 20px auto;
+  line-height: 1.6;
+  max-width: 800px;
+  text-align: left;
+}
+
+/* 메인 이미지 */
+.Supporters {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* YNWA 이미지 */
+.YNWA_logo,
+.YNWA_poster {
+  max-width: 30%;
+  height: 200px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.poster-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* 레코드판 버튼 스타일 */
+#playButton {
+  width: 80px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+/* 회전 애니메이션 */
+.spin {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 모바일 대응 */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 1.6em;
+  }
+  #new_logo {
+    max-width: 80px;
+  }
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 @media screen and (max-width: 480px) {
-    ul a {
-        font-size: 1.2em; /* 더 작은 화면에서는 글자 크기 더 줄이기 */
-    }
-   
-    .right {
-        font-size: 1em;
-    }
-    
-    #new_logo {
-        max-width: 60px;
-    }
+  h1 {
+    font-size: 1.4em;
+  }
+  #new_logo {
+    max-width: 60px;
+  }
 }

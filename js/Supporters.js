@@ -1,15 +1,12 @@
+const playButton = document.getElementById("playButton");
+const audio = document.getElementById("ynwaAudio");
 
-// 버튼 클릭 시 YNWAfan.mp3 재생
-  document.getElementById("playButton").addEventListener("click", () => {
-      const audio = document.getElementById("ynwaAudio");
-      const buttonImage = document.getElementById("playButton");
-
-      if(buttonImage.src.includes("play.png")){
-          audio.play();
-          buttonImage.src="sound/pause.png";
-      }
-      else if(buttonImage.src.includes("pause.png")){
-          audio.pause();
-          buttonImage.src="sound/play.png";
-      }
-  });
+playButton.addEventListener("click", () => {
+  if (audio.paused) {
+    audio.play();
+    playButton.classList.add("spin"); // 회전 시작
+  } else {
+    audio.pause();
+    playButton.classList.remove("spin"); // 회전 멈춤
+  }
+});
