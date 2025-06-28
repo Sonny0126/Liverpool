@@ -16,9 +16,18 @@ body {
 }
 
 #new_logo {
-  max-width: 80px;
+  width: 120px; /* 적당한 크기로 설정 */
+  position: fixed;
+  top: 20px;
+  left: 50px;
+  z-index: 1000; /* 다른 요소 위로 표시 */
   cursor: pointer;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 
 .header {
   display: flex;

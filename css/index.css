@@ -1,108 +1,89 @@
+/* 전체 레이아웃 */
 body {
-  font-family: "Noto Sans KR", "Segoe UI", sans-serif;
-  /* background-color: #fff; */
   margin: 0;
-  padding: 0;
-  color: #222;
-}
-
-.right p {
-  font-size: 25px;
-  font-weight: bold;
-  color: #000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
 }
 
 .container {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
+  min-height: 100vh;
 }
 
 /* 왼쪽 영역 */
 .left {
+  width: 250px;
+  background-color: #d00027; /* Liverpool Red */
+  color: white;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  align-items: center;
+  padding-top: 200px;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+#new_logo {
+  width: 120px; /* 적당한 크기로 설정 */
+  position: fixed;
+  top: 20px;
+  left: 50px;
+  z-index: 1000; /* 다른 요소 위로 표시 */
+  cursor: pointer;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.left ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.left ul li {
+  width: 100%;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.left ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 12px 0;
+  display: block;
+  transition: background 0.3s ease;
+}
+
+.left ul li a:hover {
+  background-color: #a1001c;
 }
 
 /* 오른쪽 영역 */
 .right {
-  justify-content: center; /* 수직 가운데 */
-  align-items: center; /* 수평 가운데 */
-  min-height: 0px; /* 원하는 높이로 조절 */
-}
-
-/* 메뉴 */
-ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-ul a {
-  display: block;
+  flex-grow: 1;
+  padding: 60px;
+  background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.85)),
+              url("../image/background.png") no-repeat center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.6;
+  font-size: 2rem;
   font-weight: bold;
-  font-size: 2em;
-  text-decoration: none;
-  color: #c00;
-  margin-bottom: 10px;
-  transition: color 0.2s;
+  color: #333;
 }
 
-ul a:hover {
-  color: #900;
-}
-
-/* 로고 */
-#new_logo {
-  max-width: 100px;
-  height: auto;
-  cursor: pointer;
-}
 
 /* 배경 이미지 */
 #background {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  bottom: 0;
+  right: 0;
+  width: 400px;
+  opacity: 0.1;
   z-index: -1;
-  object-fit: cover;
-  opacity: 0.8;
-}
-
-/* 모바일 */
-@media screen and (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .right {
-    font-size: 1.2em;
-    margin-top: 20px;
-  }
-  ul a {
-    font-size: 1.5em;
-  }
-  #new_logo {
-    max-width: 80px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  ul a {
-    font-size: 1.2em;
-  }
-  .right {
-    font-size: 1em;
-  }
-  #new_logo {
-    max-width: 60px;
-  }
 }
