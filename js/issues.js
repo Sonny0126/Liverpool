@@ -96,9 +96,12 @@ document.addEventListener("DOMContentLoaded", () => {
   // 이슈 항목 동적 생성
   issues.forEach((issue, index) => {
     const li = document.createElement("li");
-
     const titleBtn = document.createElement("button");
-    titleBtn.textContent = issue.title;
+
+    //날짜가 있는 경우, 타이틀 뒤에 괄호로 추가
+    const titlewithDate = issue.date ? `${issue.title} (${issue.date})` : issue.title;
+
+    titleBtn.textContent = titlewithDate;
     titleBtn.classList.add("issue-title");
     titleBtn.setAttribute("data-index", index);
 
