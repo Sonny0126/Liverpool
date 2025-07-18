@@ -1,5 +1,7 @@
 // 구글 API 키를 변수에 저장
-const apiKey = ""; // 여기에 API 키를 입력합니다.
+require("dotenv").config();
+
+const apiKey = process.env.API_KEY; // 여기에 API 키를 입력합니다.
 
 // 구글 맵 API 초기화 함수
 function initMap() {
