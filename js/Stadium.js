@@ -1,4 +1,4 @@
-// 구글 API 키를 변수에 저장
+// 구글 API키 가져오기
 require("dotenv").config({ path: "../.env" });
 
 const apiKey = process.env.API_KEY; // 여기에 API 키를 입력합니다.
